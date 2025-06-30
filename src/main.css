@@ -76,8 +76,7 @@ p {
 
 .horizontal-spacer {
   width: 0;
-  height: 29px;
-  border: 1px solid #bf3638;
+  border: 1px solid #222222;
 }
 
 .winged-header {
@@ -98,11 +97,17 @@ p {
   padding-bottom: 0.25em;
 }
 
+.absolute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 
 
 
-.img-con > img {
+
+#headshot {
   border-radius: 80px;
   border: 2px solid #222222;
 }
@@ -116,7 +121,7 @@ p {
 }
 
 .block-card {
-  width: 70%;
+  width: 75%;
   text-align: left;
 }
 
@@ -148,6 +153,7 @@ p {
   color: #fffefe;
   background: #222222;
   text-align: center;
+  z-index: 2;
 }
 
 #navbar > ul {
@@ -190,11 +196,12 @@ p {
 }
 
 #landing-graphic {
-  height: 636px;
+  height: 81vh;
   border-bottom: 2px solid #222222;
 }
 
 #goal-section {
+  margin-top: 1.5rem;
   text-align: center;
 }
 
