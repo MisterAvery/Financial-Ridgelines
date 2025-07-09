@@ -10,7 +10,7 @@ Darg Gray: #222222
 */
 
 :root {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 * {
@@ -208,7 +208,7 @@ p {
 .goal-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 1em auto 2em auto;
 }
 

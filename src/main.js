@@ -71,7 +71,7 @@ class Cloud {
 }
 
 
-let clouds = [new Cloud(100, 100, 1), new Cloud(600, 80, 1), new Cloud(1000, 120, 1)];
+let clouds = [new Cloud(100, 100, 0.4), new Cloud(600, 80, 0.45), new Cloud(1000, 120, 0.35)];
 
 
 function setup() {
