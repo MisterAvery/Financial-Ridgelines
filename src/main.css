@@ -51,7 +51,7 @@ h2 {
 h3 {
   font-size: 1.3rem;
   letter-spacing: 1px;
-  font-weight: 800;
+  font-weight: 700;
   font-family: Orbitron, monospace;
 }
 
@@ -200,26 +200,71 @@ p {
   border-bottom: 2px solid #222222;
 }
 
+/*#goal-section {*/
+/*  width: 90%;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  margin: 1rem auto 0 auto;*/
+/*}*/
+
+/*#goal-section > img {*/
+/*  width: auto;*/
+/*  height: 100%;*/
+/*}*/
+
+/*.goal-card {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  width: 90%;*/
+/*  margin: 0.8em auto 0.7em auto;*/
+/*}*/
+
+/*.goal-card > p {*/
+/*  width: 73%;*/
+/*}*/
+
+#landing-header {
+  display: inline-block;
+  width: 60%;
+  margin: 1em 0;
+  padding: 1.21em 4.5rem;
+  text-transform: uppercase;
+}
+
 #goal-section {
-  margin-top: 1.5rem;
-  text-align: center;
+  width: 85%;
+  margin: 0.5rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+#goal-section > #img-con {
+  grid-row: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  /*width: 58%;*/
+}
+
+#goal-section > #img-con > img {
+  width: 100%;
+  height: auto;
 }
 
 .goal-card {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  margin: 1em auto 2em auto;
+  justify-content: space-between;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .goal-card > p {
-  max-width: 73%;
-}
-
-#goal-section > h3 {
-  display: inline-block;
-  width: 55%;
-  margin: 0.6em 0;
-  padding: 1.21em 4.9rem;
-  text-transform: uppercase;
+  width: 73%;
 }
