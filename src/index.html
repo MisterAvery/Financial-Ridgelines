@@ -45,17 +45,53 @@
       <ul>
         <a class="nav-item selected" href="./index.html"><li>Mission & Welcome</li></a>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
-        <li class="nav-item">Products & Training</li>
+        <li class="nav-item" id="courses-dropdown-trigger" onclick="displayDropdown()">Products & Training</li>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
         <a class="nav-item" href="./about.html"><li>About & Contact</li></a>
       </ul>
     </section>
     
+    <section id="courses-dropdown" class="absolute">
+      <div id="course-selection-con">
+        <h4 class="course-short-title selected">FLOE Seminar</h4>
+      </div>
+      <div id="course-content-con" class="block-card">
+        <h2 id="content-header">Financial Levers for Operational Effects Seminar</h2>
+        <div id="course-content">
+          <ol id="course-bullets">
+            <li>How financial intelligence connects organizational people, operations,
+            logistics and networks.</li>
+            <li>How ‘value’ and resourcing is generated, stored, moved and used and what
+            opportunities or threats it can present for their mission set.
+            <li>How to employ financial information to achieve operational effects.</li>
+            <li>How do protect their own unit’s financial and logistical efforts.</li>
+            <li>Inter-Agency and International perspectives, authorities and capabilities –
+            and the necessity for a team-oriented approach spanning partner agencies.</li>
+            <li>The near-universal application of financial information to all occupational
+            specialties and units.</li>
+            <li>The economic impacts of the operating environment upon military end
+            states as well as military impacts to the local economy.</li>
+          </ol>
+          <div class="horizontal-spacer" style="height: 100px; border-color: #bf3638; margin: auto 0 auto 0;"></div>
+          <p id="course-paragraph">
+            The FLOE seminar teaches participants how to understand and
+            apply financial information and intelligence to support and achieve organizational
+            effects and end states – both offensively and defensively. Students learn key concepts
+            of preventing ‘friendly’ financial efforts from negatively impacting operations and our
+            strategic objectives (defense), the economic impacts of the local Operating
+            Environment, as well as exploiting and understanding adversarial efforts to raise,
+            store, move and use financial resources to achieve desired effects (offense) working
+            within an inter-agency and international framework.
+          </p>
+        </div>
+      </div>
+    </section>
+    
     <section id="landing-graphic" style="position: relative;">
-      <canvas id="canvas" class="absolute"></canvas>
+      <!--<canvas id="canvas" class="absolute"></canvas>-->
       <div class="absolute" style="width: 100%; height: 100%; overflow: hidden;">
-        <img style="position: absolute; left: -17%; bottom: -9%;" width="108%" src="../assets/mountain.png">
-        <img style="position: absolute; right: -17%; bottom: -10%;" width="98%" src="../assets/mountain-reversed.png">
+        <!--<img style="position: absolute; left: -17%; bottom: -9%;" width="108%" src="../assets/mountain.png">-->
+        <!--<img style="position: absolute; right: -17%; bottom: -10%;" width="98%" src="../assets/mountain-reversed.png">-->
         <div style="border-radius: 100%; border: 6px solid #222222; position: absolute; left: 50%; top: 40%; padding: 50px 100px; background: #fffefe; transform: translate(-50%, -50%);">
           <img width="400px" src="../assets/landing-logo.png">
         </div>
@@ -93,7 +129,7 @@
         
         <div class="goal-card card block-card">
           <img src="../assets/eagle-icon.png" height="50px">
-          <p><strong>Perspectives:</strong> Extensive experience with special Operations, Counter Terrorism, Military framework, Army Financial Processes and counter Threat Finance applications</p>
+          <p><strong>Perspectives:</strong> Extensive experience with special Operations, Counter Terrorism, Military Framework, Army Financial Processes and Counter Threat Finance Applications</p>
         </div>
         
         <div class="goal-card card block-card">
@@ -103,7 +139,7 @@
         
         <div class="goal-card card block-card">
           <img src="../assets/dollars-icon.png" height="50px">
-          <p><strong>Innovation:</strong> Extensive experience in the development, incubation, implementation and application of Threat Finance, Strategic Army Financial Systems and Billing Processes</p>
+          <p><strong>Innovation:</strong> Comprehensive experience in the development, incubation, implementation and application of Threat Finance, Strategic Army Financial Systems and Billing Processes</p>
         </div>
         
         <div class="goal-card card block-card">
@@ -113,16 +149,28 @@
         
         <div class="goal-card card block-card">
           <img src="../assets/mountain-icon.png" height="50px">
-          <p><strong>Networks:</strong> extensive relationships within Military, Inter-Agency, Academia, Private Financial Industry and Credentialing organizations</p>
+          <p><strong>Networks:</strong> Extensive relationships within Military, Inter-Agency, Academia, Private Financial Industry and Credentialing organizations</p>
         </div>
       <!--</div>-->
     </section>
     
-    <script src="./main.js"></script>
+    <!--<script src="./main.js"></script>-->
     <script>
-      window.onload = () => {
-        setup();
-        draw();
+      // window.onload = () => {
+      //   setup();
+      //   draw();
+      // }
+      
+      let dropddownDisplayed = false;
+      
+      function displayDropdown() {
+          if (!dropddownDisplayed) {
+            document.getElementById("courses-dropdown").classList.add("dropdown-active");
+            dropddownDisplayed = true;
+          } else {
+            document.getElementById("courses-dropdown").classList.remove("dropdown-active");
+            dropddownDisplayed = false;
+          }
       }
     </script>
   </body>

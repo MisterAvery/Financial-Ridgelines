@@ -61,7 +61,7 @@ h4 {
   font-family: Orbitron, monospace;
 }
 
-p {
+p, li {
   font-family: Oxanium, sans-serif;
 }
 
@@ -153,7 +153,7 @@ p {
   color: #fffefe;
   background: #222222;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 #navbar > ul {
@@ -198,7 +198,78 @@ p {
 #landing-graphic {
   height: 81vh;
   border-bottom: 2px solid #222222;
+  background-image: url('../assets/landing-background.jpg');
+  background-size: cover;
+  background-position-y: 35%;
 }
+
+
+
+
+
+#courses-dropdown {
+  display: none;
+  height: 75vh;
+  background: #222222e3;
+  color: #fffefe;
+  border-bottom: 2px solid #fffefe;
+  top: 121px;
+  z-index: 2;
+}
+
+.dropdown-active {
+  display: flex !important;
+}
+
+#course-selection-con {
+  width: 18%;
+  overflow: auto;
+}
+
+#course-selection-con > .selected {
+  border-right: none;
+  color: #63bd8a;
+}
+
+.course-short-title {
+  border: 2px solid #fffefe;
+  line-height: 110px;
+}
+
+#course-content-con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#course-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+#content-header {
+  margin: 0 0 1em 8%;
+  color: #bf3638;
+  border-color: #fffefe;
+}
+
+#course-paragraph, #course-bullets {
+  width: 34%;
+  line-height: 150%;
+  border: 2px solid #fffefe;
+  border-radius: 8px;
+  background: #222222;
+  text-align: left;
+  padding: 1.3em;
+}
+
+
+
+
 
 /*#goal-section {*/
 /*  width: 90%;*/
