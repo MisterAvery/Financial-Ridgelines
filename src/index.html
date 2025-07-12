@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <!-- Basic Meta -->
@@ -37,7 +37,6 @@
   
     <!-- Canonical URL -->
     <link rel="canonical" href="https://financialridgelines.com">
-  
   </head>
   <body>
     <section id="navbar">
@@ -45,7 +44,7 @@
       <ul>
         <a class="nav-item selected" href="./index.html"><li>Mission & Welcome</li></a>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
-        <li class="nav-item" id="courses-dropdown-trigger" onclick="displayDropdown()">Products & Training</li>
+        <li class="nav-item" id="courses-dropdown-trigger" onclick="toggleDropdown()">Products & Training</li>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
         <a class="nav-item" href="./about.html"><li>About & Contact</li></a>
       </ul>
@@ -58,7 +57,24 @@
       <div id="course-content-con" class="block-card">
         <h2 id="content-header">Financial Levers for Operational Effects Seminar</h2>
         <div id="course-content">
+          <div id="course-paragraph">
+            <h3>Course Description</h3>
+            <p>
+              The FLOE seminar teaches participants how to understand and
+              apply financial information and intelligence to support and achieve organizational
+              effects and end states – both offensively and defensively. Students learn key concepts
+              of preventing ‘friendly’ financial efforts from negatively impacting operations and our
+              strategic objectives (defense), the economic impacts of the local Operating
+              Environment, as well as exploiting and understanding adversarial efforts to raise,
+              store, move and use financial resources to achieve desired effects (offense) working
+              within an inter-agency and international framework.
+            </p>
+          </div>
+          
+          <div class="horizontal-spacer" style="height: 100px; border-color: #bf3638; margin: auto 0 auto 0;"></div>
+          
           <ol id="course-bullets">
+            <h3>End State: Students Understand</h3>
             <li>How financial intelligence connects organizational people, operations,
             logistics and networks.</li>
             <li>How ‘value’ and resourcing is generated, stored, moved and used and what
@@ -72,34 +88,26 @@
             <li>The economic impacts of the operating environment upon military end
             states as well as military impacts to the local economy.</li>
           </ol>
-          <div class="horizontal-spacer" style="height: 100px; border-color: #bf3638; margin: auto 0 auto 0;"></div>
-          <p id="course-paragraph">
-            The FLOE seminar teaches participants how to understand and
-            apply financial information and intelligence to support and achieve organizational
-            effects and end states – both offensively and defensively. Students learn key concepts
-            of preventing ‘friendly’ financial efforts from negatively impacting operations and our
-            strategic objectives (defense), the economic impacts of the local Operating
-            Environment, as well as exploiting and understanding adversarial efforts to raise,
-            store, move and use financial resources to achieve desired effects (offense) working
-            within an inter-agency and international framework.
-          </p>
         </div>
       </div>
     </section>
     
     <section id="landing-graphic" style="position: relative;">
-      <!--<canvas id="canvas" class="absolute"></canvas>-->
       <div class="absolute" style="width: 100%; height: 100%; overflow: hidden;">
-        <!--<img style="position: absolute; left: -17%; bottom: -9%;" width="108%" src="../assets/mountain.png">-->
-        <!--<img style="position: absolute; right: -17%; bottom: -10%;" width="98%" src="../assets/mountain-reversed.png">-->
         <div style="border-radius: 100%; border: 6px solid #222222; position: absolute; left: 50%; top: 40%; padding: 50px 100px; background: #fffefe; transform: translate(-50%, -50%);">
           <img width="400px" src="../assets/landing-logo.png">
         </div>
-        <img style="position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); filter: invert(100%); padding: 0.5rem 1rem; border-radius: 8px; background: #ddddddb8;" width="470px" src="../assets/slogan.png">
+        <img style="position: absolute; left: 50%; bottom: 1.5%; transform: translate(-50%, 0); filter: invert(100%); padding: 0.7rem 1rem 0.3rem 1rem; border-radius: 8px; background: #ddddddb8; width: 30%;" src="../assets/slogan.png">
       </div>
     </section>
     
     <h3 class="card" id="landing-header">Training at the convergence zone of Illicit Finance, AML, National Security and Emerging Value Transfer Systems</h3>
+    
+    <div class="winged-header">
+        <div class="vertical-spacer" style="border-color: #222222;"></div>
+        <h3 class="card" style="color: #bf3638;">Our Value Proposition to your Organization:</h3>
+        <div class="vertical-spacer" style="border-color: #222222;"></div>
+      </div>
     
     <section id="goal-section">
       <div class="card goal-card block-card" id="img-con">
@@ -114,7 +122,7 @@
         
         <div class="goal-card card block-card">
           <img src="../assets/eagle-icon.png" height="50px">
-          <p><strong>Skills and Relationships:</strong> In-depth knowledge, expertise, perspectives, and relationships spanning the DoD, Army, Special operations, Inter-Agency, Commercial Industry and Academia</p>
+          <p><strong>Skills and Relationships:</strong> In-depth knowledge, expertise, perspectives, and relationships spanning the DoD, Army, Special Operations, Inter-Agency, Commercial Industry and Academia</p>
         </div>
         
         <div class="goal-card card block-card">
@@ -124,12 +132,12 @@
         
         <div class="goal-card card block-card">
           <img src="../assets/dollars-icon.png" height="50px">
-          <p><strong>Credentials:</strong> Certified Anti-Money Laundering Specialist, cryptocurrency Fundamentals, Certified Defense Financial Manager</p>
+          <p><strong>Credentials:</strong> Certified Anti-Money Laundering Specialist, Cryptocurrency Fundamentals, Certified Defense Financial Manager</p>
         </div>
         
         <div class="goal-card card block-card">
           <img src="../assets/eagle-icon.png" height="50px">
-          <p><strong>Perspectives:</strong> Extensive experience with special Operations, Counter Terrorism, Military Framework, Army Financial Processes and Counter Threat Finance Applications</p>
+          <p><strong>Perspectives:</strong> Extensive experience with Special Operations, Counter Terrorism, Military Framework, Army Financial Processes and Counter Threat Finance Applications</p>
         </div>
         
         <div class="goal-card card block-card">
@@ -154,38 +162,30 @@
       <!--</div>-->
     </section>
     
-    <!--<script src="./main.js"></script>-->
-    <script>
-      // window.onload = () => {
-      //   setup();
-      //   draw();
-      // }
-      
-      let dropddownDisplayed = false;
-      
-      function displayDropdown() {
-          if (!dropddownDisplayed) {
-            document.getElementById("courses-dropdown").classList.add("dropdown-active");
-            dropddownDisplayed = true;
-          } else {
-            document.getElementById("courses-dropdown").classList.remove("dropdown-active");
-            dropddownDisplayed = false;
-          }
-      }
-    </script>
+    <img src="../assets/mountain.png" style="position: absolute; bottom: 50px; left: -330px; z-index: -1;">
+    
+    <section id="footer">
+      <div>
+        <p><span style="color: #63bd8a;">Financial Ridgelines LLC</span> is a proudly owned Service-Disabled Veteran Owned Small Business (SDVOB)</p><br>
+        <p>
+          <span style="color: #bf3638;">UEI:</span> XFBQG66WH877<br>
+          <span style="color: #bf3638;">CAGE:</span> 9T1V8<br>
+          <span style="color: #bf3638;">NAICS:</span> 611430
+        </p>
+      </div>
+      <div>
+        <p>We are headquartered in <span style="color: #63bd8a;">Southern Pines, North Carolina</span>, USA</p><br>
+        <p>&copy; 2025 Financial Ridgelines LLC</p>
+        <p>Site programming and co-design by <a href="https://www.linkedin.com/in/averya-smith" target="_blank" style="color: #63bd8a;">Avery Smith</a></p>
+      </div>
+    </section>
+    
+    <script src="./main.js"></script>
   </body>
 </html>
 
 
 <!--
-
+Customizable course option
 Add contact form to the contact page and set up email service
-Incorporate set courses into products dropdown
-Add ven diagram photo to home page
-Add subheader for the goals section: "Our Value Proposition to your Organization:"
-Adjust goals section on home page
-  Smaller containing less information
-  Off to the side, equal focus with the venn diagram image
-  
-
 -->
