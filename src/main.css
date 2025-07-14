@@ -6,6 +6,7 @@ Background: #e6f4ff
 Green: #63bd8a
 Red: #bf3638
 White: #fffefe
+Blue: #415e84
 Darg Gray: #222222
 
 */
@@ -47,7 +48,7 @@ h2 {
   letter-spacing: 1px;
   font-family: Orbitron, monospace;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 h3 {
@@ -69,6 +70,26 @@ p, li {
 
 li {
   margin-left: 1em;
+}
+
+input, textarea {
+  font-size: 0.9rem;
+  margin: 0.4em 0 1em 0;
+  padding: 0.3em;
+  border: 1px solid #222222;
+  font-family: Oxanium, Sans-Serif;
+  width: 80%;
+}
+
+button {
+  display: block;
+  font-size: 0.95rem;
+  padding: 0.5em 3em;
+  border: 1px solid #222222;
+  font-family: Oxanium, Sans-Serif;
+  background: #e7f4fd;
+  font-weight: 550;
+  margin-top: 1em;
 }
 
 .spacer {
@@ -109,6 +130,10 @@ li {
   top: 0;
 }
 
+.pdf-viewer {
+  min-height: 90vh;
+}
+
 
 
 
@@ -121,7 +146,7 @@ li {
 .card {
   display: inline-block;
   background: #fffefe;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0.8em 3em;
   margin: 1em 0;
 }
@@ -133,7 +158,7 @@ li {
 
 .block-card > h2 {
   color: #63bd8a;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 0;
   margin-bottom: 0.6em;
   border-bottom: 3px solid black;
@@ -150,12 +175,15 @@ li {
 
 
 #navbar {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   position: sticky;
   top: 0;
   left: 0;
   padding: 1.5rem 0 0.4rem 0;
   width: 100%;
+  height: 15vh;
   color: #fffefe;
   background: #222222;
   text-align: center;
@@ -182,11 +210,10 @@ li {
   margin-left: 0;
   color: #fffefe;
   font-family: Oxanium, sans-serif;
-  font-size: 1.1rem;
   padding: 0.46em 3.6em;
   transition: background ease 450ms;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .nav-item:hover {
@@ -208,7 +235,7 @@ li {
   border-bottom: 2px solid #222222;
   background-image: url('../assets/landing-background.jpg');
   background-size: cover;
-  background-position-y: 35%;
+  background-position-y: 18%;
   background-position-x: center;
 }
 
@@ -217,12 +244,14 @@ li {
 
 
 #courses-dropdown {
+  position: absolute;
+  width: 100%;
   display: none;
   background: #222222e3;
   color: #fffefe;
   border-bottom: 2px solid #fffefe;
-  top: 121px;
   z-index: 2;
+  margin-top: 15vh;
 }
 
 .dropdown-active {
@@ -238,6 +267,7 @@ li {
 #course-selection-con > .selected {
   border-right: none;
   color: #63bd8a;
+  background: #444444;
 }
 
 .course-short-title {
@@ -246,11 +276,7 @@ li {
 }
 
 #course-content-con {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  width: 82%;
   padding: 1rem;
 }
 
@@ -270,9 +296,15 @@ li {
   border-color: #fffefe;
 }
 
-#course-paragraph, #course-bullets {   width: 40%;   line-height: 150%;
-border: 2px solid #fffefe;   border-radius: 8px;   background: #222222;
-text-align: left;   padding: 1.3em; }
+#course-paragraph, #course-bullets {
+  width: 40%;
+  line-height: 150%;
+  border: 2px solid #fffefe;
+  border-radius: 6px;
+  background: #222222;
+  text-align: left;
+  padding: 1.3em;
+}
 
 
 
@@ -324,11 +356,11 @@ text-align: left;   padding: 1.3em; }
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  }
+}
 
 #goal-section > #img-con > img {
   width: 100%;
+  max-width: 400px;
   height: auto;
 }
 
@@ -344,6 +376,34 @@ text-align: left;   padding: 1.3em; }
 
 .goal-card > p {
   width: 73%;
+}
+
+
+
+
+
+#contact-options > a {
+  color: #415e84;
+}
+
+#contact-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+#contact-form > div, #form-message {
+  width: 100%;
+}
+
+#contact-form h3 {
+  font-size: 1.1rem;
+}
+
+#form-button {
+  
 }
 
 

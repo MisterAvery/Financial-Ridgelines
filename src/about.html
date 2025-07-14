@@ -40,6 +40,34 @@
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ed4a97b7a0.js" crossorigin="anonymous"></script>
+    
+    <!-- EmailJs -->
+    <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>-->
+    <!--<script charset="utf-8">-->
+    <!--  (function() {-->
+    <!--    emailjs.init({-->
+    <!--      publicKey: 'Ce5vHs-3wayXdWvVU',-->
+    <!--      limitRate: {-->
+    <!--        id: 'app',-->
+            <!--// Allow 1 request per 7s-->
+    <!--        throttle: 7000-->
+    <!--      },-->
+    <!--    });-->
+    <!--  })();-->
+    
+    <!--  function sendEmail(params) {-->
+    <!--    let templateParams = {-->
+    <!--      name: document.getElementById('form-name').value,-->
+    <!--      message: document.getElementById('form-message').value,-->
+    <!--      replyEmail: document.getElementById('form-email').value-->
+    <!--    };-->
+      
+    <!--    emailjs.send('____SERVICE_ID____', 'template_93xnajr', templateParams).then(-->
+    <!--      (response) => { alert("Your email has been sent. Thank you for reaching out!"); },-->
+    <!--      (error) => { alert("Somthing went wrong. Please try again." );-->
+    <!--    );-->
+    <!--  }-->
+    <!--</script>-->
   
   </head>
   <body>
@@ -51,47 +79,27 @@
         <li class="nav-item" id="courses-dropdown-trigger" onclick="toggleDropdown()">Products & Training</li>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
         <a class="nav-item selected" href="./about.html"><li>About & Contact</li></a>
+        <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
+        <a class="nav-item" href="./publications.html"><li>Publications</li></a>
       </ul>
     </section>
     
    <section id="courses-dropdown" class="absolute">
       <div id="course-selection-con">
         <h4 class="course-short-title selected">FLOE Seminar</h4>
+        <h4 class="course-short-title">Create Your Own</h4>
       </div>
       <div id="course-content-con" class="block-card">
-        <h2 id="content-header">Financial Levers for Operational Effects Seminar</h2>
+        <h2 id="content-header"></h2>
         <div id="course-content">
           <div id="course-paragraph">
             <h3>Course Description</h3>
-            <p>
-              The FLOE seminar teaches participants how to understand and
-              apply financial information and intelligence to support and achieve organizational
-              effects and end states – both offensively and defensively. Students learn key concepts
-              of preventing ‘friendly’ financial efforts from negatively impacting operations and our
-              strategic objectives (defense), the economic impacts of the local Operating
-              Environment, as well as exploiting and understanding adversarial efforts to raise,
-              store, move and use financial resources to achieve desired effects (offense) working
-              within an inter-agency and international framework.
-            </p>
+            <p></p>
           </div>
           
           <div class="horizontal-spacer" style="height: 100px; border-color: #bf3638; margin: auto 0 auto 0;"></div>
           
-          <ol id="course-bullets">
-            <h3>End State: Students Understand</h3>
-            <li>How financial intelligence connects organizational people, operations,
-            logistics and networks.</li>
-            <li>How ‘value’ and resourcing is generated, stored, moved and used and what
-            opportunities or threats it can present for their mission set.
-            <li>How to employ financial information to achieve operational effects.</li>
-            <li>How do protect their own unit’s financial and logistical efforts.</li>
-            <li>Inter-Agency and International perspectives, authorities and capabilities –
-            and the necessity for a team-oriented approach spanning partner agencies.</li>
-            <li>The near-universal application of financial information to all occupational
-            specialties and units.</li>
-            <li>The economic impacts of the operating environment upon military end
-            states as well as military impacts to the local economy.</li>
-          </ol>
+          <ol id="course-bullets"></ol>
         </div>
       </div>
     </section>
@@ -167,11 +175,34 @@
         <h2>Contact Me</h2>
         <p>Like what you see? Follow me to the financial ridgeline!</p>
         <div class="vertical-spacer" style="width: 12.8%; max-width: 110px; margin: 1.5rem auto;"></div>
-        <h4 style="font-size: 1.1rem;">
-          <span class="spacer"><i class="fa-brands fa-linkedin"></i></span>Linked in
-          <span class="spacer"><i class="fa-solid fa-envelope"></i></span>brian.a.smith.nc@gmail.com
-          <span class="spacer"><i class="fa-solid fa-phone"></i></span>253-861-0220
+        <h4 style="font-size: 1.1rem;" id="contact-options">
+          <a href="https://www.linkedin.com/in/brian-a-smithnc/" target="_blank"><span class="spacer"><i class="fa-brands fa-linkedin"></i></span>Linked in</a>
+          <a href="mailto:brian.a.smith.nc@gmail.com" target="_blank"><span class="spacer"><i class="fa-solid fa-envelope"></i></span>brian.a.smith.nc@gmail.com</a>
+          <a href="tel:2538610220"><span class="spacer"><i class="fa-solid fa-phone"></i></span>253-861-0220</a>
         </h4>
+      </div>
+      
+      <div class="card block-card" id="contact-form-con" style="text-align: center">
+        <h2>Or Send Me an Email</h2>
+        <p>Send an email to reach out!</p>
+        
+        <div class="vertical-spacer" style="width: 12.8%; max-width: 110px; margin: 1.5rem auto;"></div>
+        
+        <div id="contact-form">
+          <div style="text-align: left;">
+            <h3>Organizatoin Name</h3>
+            <input type="text" id="form-name" required>
+            
+            <h3>Organizatoin Email</h3>
+            <input type="text" id="form-email" required>
+            
+            <button id="form-button">Send</button>
+          </div>
+          <div style="text-align: left; max-width: 50%;">
+            <h3>Message</h3>
+            <textarea id="form-message" rows="5" style="resize: vertical;" required></textarea>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -189,7 +220,7 @@
       <div>
         <p>We are headquartered in <span style="color: #63bd8a;">Southern Pines, North Carolina</span>, USA</p><br>
         <p>&copy; 2025 Financial Ridgelines LLC</p>
-        <p>Site programming and co-design by <a href="https://www.linkedin.com/in/averya-smith" target="_blank" style="color: #63bd8a;">Avery Smith</a></p>
+        <p>Site programming and design by <a href="https://www.linkedin.com/in/averya-smith" target="_blank" style="color: #63bd8a;">Avery Smith</a></p>
       </div>
     </section>
     
