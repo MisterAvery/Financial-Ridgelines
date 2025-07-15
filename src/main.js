@@ -14,6 +14,8 @@ function toggleDropdown() {
     }
 }
 
+let selectedTitle;
+
 const courseInformation = {
   "FLOE Seminar": {
     longName: "Financial Levers for Operational Effects Seminar",
@@ -27,14 +29,27 @@ const courseInformation = {
       "The near-universal application of financial information to all occupational specialties and units.",
       "The economic impacts of the operating environment upon military end states as well as military impacts to the local economy."
     ]
+  },
+  
+  "Custom": {
+    longName: "Custom",
+    description: "Make it up",
+    bullets: [
+      "foo",
+      "bar"
+    ]
   }
 };
 
-function setDropdownInformation(shortTitle) {
-  document.getElementById("content-header").innerText = courseInformation[shortTitle].longName;
-  document.querySelector("#course-paragraph > p").innerText = courseInformation[shortTitle].description;
+function setDropdownInformation(event) {
+  document.querySelector("#course-selection-con > .selected").classList.remove("selected");
+  selectedTitle = event.target.innerText;
+  event.target.classList.add("selected");
   
-  document.getElementById("course-bullets").innerHTML = "<h3>End State: Students Understand</h3>" + courseInformation[shortTitle].bullets.map(bullet => { return `<li>${bullet}</li>`}).join('');
+  document.getElementById("content-header").innerText = courseInformation[selectedTitle].longName;
+  document.querySelector("#course-paragraph > p").innerText = courseInformation[selectedTitle].description;
+  
+  document.getElementById("course-bullets").innerHTML = "<h3>End State: Students Understand</h3>" + courseInformation[selectedTitle].bullets.map(bullet => { return `<li>${bullet}</li>`}).join('');
 }
 
-document.onload = setDropdownInformation("FLOE Seminar");
+document.onload = setDropdownInformation({ target: document.getElementById("initial")});

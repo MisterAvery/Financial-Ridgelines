@@ -42,32 +42,26 @@
     <script src="https://kit.fontawesome.com/ed4a97b7a0.js" crossorigin="anonymous"></script>
     
     <!-- EmailJs -->
-    <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>-->
-    <!--<script charset="utf-8">-->
-    <!--  (function() {-->
-    <!--    emailjs.init({-->
-    <!--      publicKey: 'Ce5vHs-3wayXdWvVU',-->
-    <!--      limitRate: {-->
-    <!--        id: 'app',-->
-            <!--// Allow 1 request per 7s-->
-    <!--        throttle: 7000-->
-    <!--      },-->
-    <!--    });-->
-    <!--  })();-->
-    
-    <!--  function sendEmail(params) {-->
-    <!--    let templateParams = {-->
-    <!--      name: document.getElementById('form-name').value,-->
-    <!--      message: document.getElementById('form-message').value,-->
-    <!--      replyEmail: document.getElementById('form-email').value-->
-    <!--    };-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script charset="utf-8">
+      (function() {
+        emailjs.init("Ce5vHs-3wayXdWvVU");
+      })();
+    </script>
+    <script charset="utf-8">
+      function sendEmail() {
+        event.preventDefault();
       
-    <!--    emailjs.send('____SERVICE_ID____', 'template_93xnajr', templateParams).then(-->
-    <!--      (response) => { alert("Your email has been sent. Thank you for reaching out!"); },-->
-    <!--      (error) => { alert("Somthing went wrong. Please try again." );-->
-    <!--    );-->
-    <!--  }-->
-    <!--</script>-->
+        emailjs.sendForm('service_pf4648c', 'template_93xnajr', "#contact-form").then(
+          (response) => {
+            alert("Your email has been sent. Thank you for reaching out!");
+          },
+          (error) => {
+            alert("Somthing went wrong. Please try again.");
+          }
+        );
+      }
+    </script>
   
   </head>
   <body>
@@ -178,7 +172,6 @@
         <h4 style="font-size: 1.1rem;" id="contact-options">
           <a href="https://www.linkedin.com/in/brian-a-smithnc/" target="_blank"><span class="spacer"><i class="fa-brands fa-linkedin"></i></span>Linked in</a>
           <a href="mailto:brian.a.smith.nc@gmail.com" target="_blank"><span class="spacer"><i class="fa-solid fa-envelope"></i></span>brian.a.smith.nc@gmail.com</a>
-          <a href="tel:2538610220"><span class="spacer"><i class="fa-solid fa-phone"></i></span>253-861-0220</a>
         </h4>
       </div>
       
@@ -188,21 +181,21 @@
         
         <div class="vertical-spacer" style="width: 12.8%; max-width: 110px; margin: 1.5rem auto;"></div>
         
-        <div id="contact-form">
+        <form id="contact-form">
           <div style="text-align: left;">
-            <h3>Organizatoin Name</h3>
-            <input type="text" id="form-name" required>
+            <h3 for="form-name">Organizatoin Name</h3>
+            <input type="text" id="form-name" name="name" autocomplete="on" required>
             
-            <h3>Organizatoin Email</h3>
-            <input type="text" id="form-email" required>
+            <h3 for="form-email">Organizatoin Email</h3>
+            <input type="text" id="form-email" name="email" autocomplete="on" required>
             
-            <button id="form-button">Send</button>
+            <button type="submit" id="form-button" onclick="sendEmail()">Send</button>
           </div>
           <div style="text-align: left; max-width: 50%;">
-            <h3>Message</h3>
-            <textarea id="form-message" rows="5" style="resize: vertical;" required></textarea>
+            <h3 for="form-message">Message</h3>
+            <textarea id="form-message" rows="5" style="resize: vertical;" name="message" required></textarea>
           </div>
-        </div>
+        </form>
       </div>
     </section>
     

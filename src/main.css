@@ -403,7 +403,12 @@ button {
 }
 
 #form-button {
-  
+  transition: background, color 160ms ease;
+}
+
+#form-button:hover {
+  background: #63bd8a;
+  color: #fffefe;
 }
 
 
