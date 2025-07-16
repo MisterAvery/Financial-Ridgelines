@@ -416,13 +416,18 @@ button {
 
 
 #footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   background: #222222;
   margin-top: 4rem;
   color: #fffefe;
   padding: 0.7rem 1.5rem;
+  text-align: left;
+}
+
+#footer > #top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 #footer p {
@@ -432,4 +437,11 @@ button {
 
 #footer > div {
   height: 100%;
+}
+
+#footer > #bottom > a {
+  all: unset;
+  color: #fffefe;
+  font-size: 0.6rem;
+  font-family: Oxanium, sans-serif;
 }
