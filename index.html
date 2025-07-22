@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
   
     <!-- CSS (optional) -->
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./src/main.css">
   
     <!-- Canonical URL -->
     <link rel="canonical" href="https://financialridgelines.com">
@@ -42,20 +42,19 @@
     <section id="navbar">
       <h1>FINANCIAL RIDGELINES, LLC</h1>
       <ul>
-        <a class="nav-item selected" href="./index.html"><li>Mission & Welcome</li></a>
+        <a class="nav-item selected" href="#"><li>Mission & Welcome</li></a>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
         <li class="nav-item" id="courses-dropdown-trigger" onclick="toggleDropdown()">Products & Training</li>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
-        <a class="nav-item" href="./about.html"><li>About & Contact</li></a>
+        <a class="nav-item" href="./src/about.html"><li>About & Contact</li></a>
         <div style="height: 29px; border-color: #bf3638;" class="horizontal-spacer"></div>
-        <a class="nav-item" href="./publications.html"><li>Publications</li></a>
+        <a class="nav-item" href="./src/publications.html"><li>Publications</li></a>
       </ul>
     </section>
     
     <section id="courses-dropdown" class="absolute">
       <div id="course-selection-con">
         <h4 class="course-short-title selected" id="initial" onmouseover="setDropdownInformation(event)">FLOE Seminar</h4>
-        <h4 class="course-short-title" onmouseOver="setDropdownInformation(event)">Custom</h4>
       </div>
       <div id="course-content-con" class="block-card">
         <h2 id="content-header"></h2>
@@ -172,6 +171,6 @@
       </div>
     </section>
     
-    <script src="./main.js"></script>
+    <script src="./src/main.js"></script>
   </body>
 </html>

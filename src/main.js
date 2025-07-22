@@ -31,14 +31,14 @@ const courseInformation = {
     ]
   },
   
-  "Custom": {
-    longName: "Custom",
-    description: "Make it up",
-    bullets: [
-      "foo",
-      "bar"
-    ]
-  }
+  // "Custom": {
+  //   longName: "Custom",
+  //   description: "Make it up",
+  //   bullets: [
+  //     "foo",
+  //     "bar"
+  //   ]
+  // }
 };
 
 function setDropdownInformation(event) {
