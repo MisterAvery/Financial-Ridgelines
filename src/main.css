@@ -246,6 +246,7 @@ button {
 #courses-dropdown {
   position: absolute;
   width: 100%;
+  max-height: 80vh;
   display: none;
   background: #222222e3;
   color: #fffefe;
@@ -262,6 +263,7 @@ button {
   width: 18%;
   overflow: auto;
   background: #22222288;
+  padding-bottom: 3rem;
 }
 
 #course-selection-con > .selected {
@@ -278,6 +280,7 @@ button {
 #course-content-con {
   width: 82%;
   padding: 1rem;
+  overflow-y: scroll;
 }
 
 #course-content {
