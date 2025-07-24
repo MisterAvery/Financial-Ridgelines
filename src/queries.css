@@ -1,0 +1,101 @@
+@media only screen and (max-width: 1040px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  #navbar {
+    height: 70px;
+  }
+  
+  #navbar > ul {
+    width: 50%;
+    position: fixed;
+    top: 75px;
+    left: 100%;
+    flex-direction: column;
+    transition: transform 280ms;
+    visibility: hidden;
+    padding: 2.8rem 0 2.8rem 0;
+  }
+  
+  #navbar:hover ul {
+    visibility: visible;
+    transform: translateX(-150%);
+  }
+  
+  #navbar > ul > .horizontal-spacer {
+    height: 0 !important;
+    width: 29px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #courses-dropdown {
+    top: 70px;
+  }
+  
+  #course-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #course-content > .horizontal-spacer {
+    width: 80px;
+    height: 0 !important;
+    margin: 2rem auto 2rem auto !important;
+  }
+  
+  #course-paragraph, #course-bullets {
+    width: 90%;
+  }
+  
+  #goal-section {
+    display: flex;
+    flex-direction: column;
+    algin-items: center;
+    justify-content: center;
+  }
+  
+  #goal-section > #img-con > img {
+    width: 30%;
+  }
+  
+  .goal-card, .block-card, .card {
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  
+  #contact-options > a {
+    display: block;
+    padding-bottom: 0.3em;
+  }
+  
+  #contact-form {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  #contact-form > div {
+    width: 90%;
+    text-align: center;
+  }
+  
+  #contact-form > div > input {
+    width: 100%;
+  }
+  
+  #form-message {
+    width: 100%;
+  }
+  
+  #form-button {
+    margin: 1rem auto 0.5rem auto;
+  }
+}

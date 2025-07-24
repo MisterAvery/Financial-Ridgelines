@@ -24,6 +24,7 @@ Darg Gray: #222222
 body {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   background: #e7f4fd;
   text-align: center;
   overflow-x: hidden;
@@ -181,13 +182,14 @@ button {
   position: sticky;
   top: 0;
   left: 0;
-  padding: 1.5rem 0 0.4rem 0;
-  width: 100%;
+  padding: 1.5rem 0 1.5rem 0;
   height: 15vh;
+  min-height: 70px;
   color: #fffefe;
   background: #222222;
   text-align: center;
   z-index: 3;
+  row-gap: 0.8rem;
 }
 
 #navbar > ul {
@@ -198,14 +200,7 @@ button {
   justify-content: space-evenly;
   align-items: center;
   list-style-type: none;
-  margin-top: 7px;
 }
-
-/*
-  position: absolute;
-  left: 90%;
-*/
-
 .nav-item {
   margin-left: 0;
   color: #fffefe;
@@ -239,6 +234,37 @@ button {
   background-position-x: center;
 }
 
+#landing-logo-con {
+  width: 41%;
+  min-width: 400px;
+  border-radius: 100%;
+  border: 6px solid #222222;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  padding: 50px 100px;
+  background: #fffefe;
+  transform: translate(-50%, -50%);
+}
+
+#landing-logo {
+  width: 100%;
+  height: auto;
+}
+
+#slogan {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5%;
+  transform: translate(-50%, 0);
+  filter: invert(100%);
+  padding: 0.7rem 1rem 0.3rem 1rem;
+  border-radius: 6px;
+  background: #ddddddb8;
+  width: 30%;
+  min-width: 250px;
+}
+
 
 
 
@@ -252,7 +278,7 @@ button {
   color: #fffefe;
   border-bottom: 2px solid #fffefe;
   z-index: 2;
-  margin-top: 15vh;
+  top: 15.5vh;
 }
 
 .dropdown-active {
@@ -261,20 +287,22 @@ button {
 
 #course-selection-con {
   width: 18%;
+  min-width: 120px;
   overflow: auto;
-  background: #22222288;
-  padding-bottom: 3rem;
+  background: #11111188;
+  padding-bottom: 1.5rem;
 }
 
 #course-selection-con > .selected {
   border-right: none;
   color: #63bd8a;
-  background: #444444;
+  background: #333333;
 }
 
 .course-short-title {
   border: 2px solid #fffefe;
-  line-height: 110px;
+  padding: 3em 0.5em 3em 0.5em;
+  line-height: 1.5em;
 }
 
 #course-content-con {
@@ -304,7 +332,7 @@ button {
   line-height: 150%;
   border: 2px solid #fffefe;
   border-radius: 6px;
-  background: #222222;
+  background: #111111;
   text-align: left;
   padding: 1.3em;
 }
@@ -313,30 +341,6 @@ button {
 
 
 
-/*#goal-section {*/
-/*  width: 90%;*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  margin: 1rem auto 0 auto;*/
-/*}*/
-
-/*#goal-section > img {*/
-/*  width: auto;*/
-/*  height: 100%;*/
-/*}*/
-
-/*.goal-card {*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  align-items: center;*/
-/*  justify-content: space-between;*/
-/*  width: 90%;*/
-/*  margin: 0.8em auto 0.7em auto;*/
-/*}*/
-
-/*.goal-card > p {*/
-/*  width: 73%;*/
-/*}*/
 
 #landing-header {
   display: inline-block;
@@ -399,6 +403,7 @@ button {
 
 #contact-form > div, #form-message {
   width: 100%;
+  text-align: left;
 }
 
 #contact-form h3 {
