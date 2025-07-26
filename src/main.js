@@ -1,4 +1,5 @@
 let dropddownDisplayed = false;
+let linksDisplayed = false;
       
 function toggleDropdown() {
     if (dropddownDisplayed) {
@@ -14,6 +15,16 @@ function toggleDropdown() {
     }
 }
 
+function toggleLinks() {
+  if (linksDisplayed) {
+      document.querySelector("#navbar > ul").classList.remove("links-active");
+      linksDisplayed = false;
+    } else {
+      document.querySelector("#navbar > ul").classList.add("links-active");
+      linksDisplayed = true;
+    }
+}
+
 let selectedTitle;
 
 const courseInformation = {
@@ -21,7 +32,7 @@ const courseInformation = {
     longName: "Tailored Classes & Relationships",
     description: "We strive to address unique requirements and interests of our audiences and customers. Leveraging keen relationships with trusted partners with Drug Enforcement Administration, Industry, Judicial and Academia, we can build a course or seminar to address unique needs by bringing a vast spectrum of actual experience – not just stories – to the classroom.",
     bullets: [
-      "we can build a course or seminar to address unique needs by bringing a vast spectrum of actual experience"
+      "We can build a course or seminar to address unique needs by bringing a vast spectrum of actual experience"
     ]
   },
   
@@ -53,7 +64,7 @@ const courseInformation = {
     longName: "Financial Competition Around the Globe",
     description: "This seminar explores how nations compete at that national/strategic level for influence and national strategic end states through the use of cross-border/international payment systems, currencies and the influence of Inter-governmental Financial Organizations.",
     bullets: [
-      "examines the economic strategies that countries use to gain influence, access and power in global regions by use of economic and financial systems",
+      "Examines the economic strategies that countries use to gain influence, access and power in global regions by use of economic and financial systems",
       "Great for military, intelligence, governmental, academic and law enforcement audiences."
     ]
   }

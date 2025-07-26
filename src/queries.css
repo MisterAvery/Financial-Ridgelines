@@ -20,9 +20,9 @@
     padding: 2.8rem 0 2.8rem 0;
   }
   
-  #navbar:hover ul {
-    visibility: visible;
-    transform: translateX(-150%);
+  .links-active {
+    visibility: visible !important;
+    transform: translateX(-150%) !important;
   }
   
   #navbar > ul > .horizontal-spacer {
