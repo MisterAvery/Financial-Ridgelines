@@ -15,14 +15,15 @@ function toggleDropdown() {
     }
 }
 
-function toggleLinks() {
+function toggleLinks(event) {
+  if (event.target.tagName == "LI") return;
   if (linksDisplayed) {
-      document.querySelector("#navbar > ul").classList.remove("links-active");
-      linksDisplayed = false;
-    } else {
-      document.querySelector("#navbar > ul").classList.add("links-active");
-      linksDisplayed = true;
-    }
+    document.querySelector("#navbar > ul").classList.remove("links-active");
+    linksDisplayed = false;
+  } else {
+    document.querySelector("#navbar > ul").classList.add("links-active");
+    linksDisplayed = true;
+  }
 }
 
 let selectedTitle;
@@ -89,4 +90,8 @@ window.onload = () => {
   document.getElementsByClassName("course-short-title")[0].classList.add("selected");
   
   setDropdownInformation({ target: document.getElementsByClassName("course-short-title")[0] });
+  
+  document.getElementById("navbar").addEventListener("touchstart", toggleLinks);
+  document.getElementById("navbar").addEventListener("click", toggleLinks);
 };
+
