@@ -91,7 +91,7 @@ window.onload = () => {
   
   setDropdownInformation({ target: document.getElementsByClassName("course-short-title")[0] });
   
-  document.getElementById("navbar").addEventListener("touchstart", toggleLinks);
-  document.getElementById("navbar").addEventListener("click", toggleLinks);
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) document.getElementById("navbar").addEventListener("touchstart", toggleLinks);
+  else document.getElementById("navbar").addEventListener("click", toggleLinks);
 };
 
